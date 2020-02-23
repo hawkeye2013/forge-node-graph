@@ -1,0 +1,541 @@
+{
+  "tests": [
+    {
+      "name": "Two Nodes, One Connection",
+      "description": "This is two nodes connected by one connection",
+      "nodes": [
+        {
+          "name": "A",
+          "inputs": [],
+          "outputs": [
+            {
+              "portID": 0
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "inputs": [
+            {
+              "portID": 0
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "connections": [
+        {
+          "from": {
+            "node": "A",
+            "port": 0
+          },
+          "to": {
+            "node": "B",
+            "port": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Two Nodes, Two Connections",
+      "description": "This is two nodes connected by two connections",
+      "nodes": [
+        {
+          "name": "A",
+          "inputs": [],
+          "outputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "inputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "connections": [
+        {
+          "from": {
+            "node": "A",
+            "port": 0
+          },
+          "to": {
+            "node": "B",
+            "port": 0
+          }
+        },
+        {
+          "from": {
+            "node": "A",
+            "port": 1
+          },
+          "to": {
+            "node": "B",
+            "port": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Two Nodes, Three Connections",
+      "description": "This is two nodes connected by three connections",
+      "nodes": [
+        {
+          "name": "A",
+          "inputs": [],
+          "outputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            },
+            {
+              "portID": 2
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "inputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            },
+            {
+              "portID": 2
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "connections": [
+        {
+          "from": {
+            "node": "A",
+            "port": 0
+          },
+          "to": {
+            "node": "B",
+            "port": 0
+          }
+        },
+        {
+          "from": {
+            "node": "A",
+            "port": 1
+          },
+          "to": {
+            "node": "B",
+            "port": 1
+          }
+        },
+        {
+          "from": {
+            "node": "A",
+            "port": 2
+          },
+          "to": {
+            "node": "B",
+            "port": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "Simple Tree",
+      "description": "This is three nodes, the first node connecting to both the second and the third",
+      "nodes": [
+        {
+          "name": "A",
+          "inputs": [],
+          "outputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "inputs": [
+            {
+              "portID": 0
+            }
+          ],
+          "outputs": []
+        },
+        {
+          "name": "C",
+          "inputs": [
+            {
+              "portID": 0
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "connections": [
+        {
+          "from": {
+            "node": "A",
+            "port": 0
+          },
+          "to": {
+            "node": "B",
+            "port": 0
+          }
+        },
+        {
+          "from": {
+            "node": "A",
+            "port": 1
+          },
+          "to": {
+            "node": "C",
+            "port": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reverse Simple Tree",
+      "description": "This is three nodes, the last node connecting to both the first and the second",
+      "nodes": [
+        {
+          "name": "A",
+          "inputs": [],
+          "outputs": [
+            {
+              "portID": 0
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "inputs": [],
+          "outputs": [
+            {
+              "portID": 0
+            }
+          ]
+        },
+        {
+          "name": "C",
+          "inputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "connections": [
+        {
+          "from": {
+            "node": "A",
+            "port": 0
+          },
+          "to": {
+            "node": "C",
+            "port": 0
+          }
+        },
+        {
+          "from": {
+            "node": "B",
+            "port": 0
+          },
+          "to": {
+            "node": "C",
+            "port": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Complex Tree With Branching",
+      "description": "This is complex tree with multiple layers",
+      "nodes": [
+        {
+          "name": "A",
+          "inputs": [],
+          "outputs": [
+            {
+              "portID": 0
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "inputs": [],
+          "outputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ]
+        },
+        {
+          "name": "C",
+          "inputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ],
+          "outputs": [
+            {
+              "portID": 0
+            }
+          ]
+        },
+        {
+          "name": "D",
+          "inputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "connections": [
+        {
+          "from": {
+            "node": "A",
+            "port": 0
+          },
+          "to": {
+            "node": "C",
+            "port": 0
+          }
+        },
+        {
+          "from": {
+            "node": "B",
+            "port": 0
+          },
+          "to": {
+            "node": "C",
+            "port": 1
+          }
+        },
+        {
+          "from": {
+            "node": "C",
+            "port": 0
+          },
+          "to": {
+            "node": "D",
+            "port": 0
+          }
+        },
+        {
+          "from": {
+            "node": "B",
+            "port": 1
+          },
+          "to": {
+            "node": "D",
+            "port": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Complex Multilevel Tree With Branching",
+      "description": "This is complex tree with multiple layers and branching",
+      "nodes": [
+        {
+          "name": "A",
+          "inputs": [],
+          "outputs": [
+            {
+              "portID": 0
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "inputs": [],
+          "outputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ]
+        },
+        {
+          "name": "C",
+          "inputs": [
+            {
+              "portID": 0
+            }
+          ],
+          "outputs": [
+            {
+              "portID": 0
+            }
+          ]
+        },
+        {
+          "name": "D",
+          "inputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ],
+          "outputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ]
+        },
+        {
+          "name": "E",
+          "inputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ],
+          "outputs": [
+            {
+              "portID": 0
+            }
+          ]
+        },
+        {
+          "name": "F",
+          "inputs": [
+            {
+              "portID": 0
+            }
+          ],
+          "outputs": []
+        },
+        {
+          "name": "G",
+          "inputs": [
+            {
+              "portID": 0
+            },
+            {
+              "portID": 1
+            }
+          ],
+          "outputs": []
+        }
+      ],
+      "connections": [
+        {
+          "from": {
+            "node": "A",
+            "port": 0
+          },
+          "to": {
+            "node": "D",
+            "port": 0
+          }
+        },
+        {
+          "from": {
+            "node": "B",
+            "port": 0
+          },
+          "to": {
+            "node": "D",
+            "port": 1
+          }
+        },
+        {
+          "from": {
+            "node": "B",
+            "port": 1
+          },
+          "to": {
+            "node": "E",
+            "port": 0
+          }
+        },
+        {
+          "from": {
+            "node": "C",
+            "port": 0
+          },
+          "to": {
+            "node": "E",
+            "port": 1
+          }
+        },
+        {
+          "from": {
+            "node": "D",
+            "port": 0
+          },
+          "to": {
+            "node": "F",
+            "port": 0
+          }
+        },
+        {
+          "from": {
+            "node": "D",
+            "port": 1
+          },
+          "to": {
+            "node": "G",
+            "port": 0
+          }
+        },
+        {
+          "from": {
+            "node": "E",
+            "port": 0
+          },
+          "to": {
+            "node": "G",
+            "port": 1
+          }
+        }
+      ]
+    }
+  ]
+}
