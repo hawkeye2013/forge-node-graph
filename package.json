@@ -1,0 +1,19 @@
+{
+  "name": "forge-node-graph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hawkeye2013/forge-node-graph.git"
+  },
+  "author": "Tucker Hawkinson",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/hawkeye2013/forge-node-graph/issues"
+  },
+  "homepage": "https://github.com/hawkeye2013/forge-node-graph#readme"
+}
